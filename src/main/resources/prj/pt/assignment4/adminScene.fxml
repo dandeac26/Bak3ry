@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="1032.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prj.pt.assignment4.PresentationLayer.AdminScene">
+   <top>
+      <AnchorPane prefHeight="54.0" prefWidth="600.0" style="-fx-background-color: ffffff;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#b97332" layoutX="22.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="17.0" />
+               </font>
+            </Text>
+            <Button fx:id="adminLogOut" layoutX="950.0" layoutY="14.0" mnemonicParsing="false" onAction="#LoggingOut" style="-fx-background-color: e2bb7e;" text="Log out" />
+            <Label fx:id="successLabel" layoutX="249.0" layoutY="45.0" prefHeight="17.0" prefWidth="50.0" textFill="#60b264" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="22.0" layoutY="14.0" text="Resources:" />
+            <TextField fx:id="resourceTextField" layoutX="86.0" layoutY="10.0" promptText="products.csv" />
+            <Button fx:id="importResource" layoutX="248.0" layoutY="10.0" mnemonicParsing="false" onAction="#importCSV" text="Import" />
+            <ListView fx:id="menuListView" layoutX="312.0" layoutY="9.0" prefHeight="233.0" prefWidth="702.0" />
+            <Label layoutX="22.0" layoutY="51.0" text="Title:" />
+            <Label layoutX="22.0" layoutY="85.0" text="Rating:" />
+            <Label layoutX="22.0" layoutY="119.0" text="Calories:" />
+            <Label layoutX="22.0" layoutY="153.0" text="Protein:" />
+            <Label layoutX="22.0" layoutY="185.0" text="Fat:" />
+            <TextField fx:id="productTitle" layoutX="73.0" layoutY="47.0" prefHeight="25.0" prefWidth="228.0" />
+            <TextField fx:id="productRating" layoutX="73.0" layoutY="81.0" prefHeight="25.0" prefWidth="62.0" />
+            <TextField fx:id="productCal" layoutX="73.0" layoutY="115.0" prefHeight="25.0" prefWidth="62.0" />
+            <TextField fx:id="productProt" layoutX="73.0" layoutY="149.0" prefHeight="25.0" prefWidth="62.0" />
+            <TextField fx:id="productFat" layoutX="73.0" layoutY="181.0" prefHeight="25.0" prefWidth="62.0" />
+            <Label layoutX="22.0" layoutY="216.0" text="Sodium:" />
+            <TextField fx:id="productSod" layoutX="73.0" layoutY="212.0" prefHeight="25.0" prefWidth="62.0" />
+            <Button fx:id="updateButton" layoutX="246.0" layoutY="81.0" mnemonicParsing="false" onAction="#updateMethod" text="update" />
+            <Button fx:id="deleteButton" layoutX="246.0" layoutY="115.0" mnemonicParsing="false" onAction="#deleteMethod" prefHeight="25.0" prefWidth="54.0" text="Delete" />
+            <Button fx:id="addButton" layoutX="243.0" layoutY="218.0" mnemonicParsing="false" onAction="#addMethod" prefHeight="25.0" prefWidth="57.0" text="Add" />
+            <Button fx:id="r2Btn" layoutX="26.0" layoutY="337.0" mnemonicParsing="false" onAction="#createReport2" prefHeight="25.0" prefWidth="121.0" text="Time Interval" />
+            <Label layoutX="-4.0" layoutY="245.0" prefHeight="17.0" prefWidth="1032.0" text="============================================================================================================================" />
+            <Label layoutX="26.0" layoutY="262.0" text="Reports:">
+               <font>
+                  <Font name="Segoe UI Black Italic" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="r3Btn" layoutX="26.0" layoutY="374.0" mnemonicParsing="false" onAction="#createReport3" text="Ordered More Than" />
+            <Button fx:id="r4Btn" layoutX="26.0" layoutY="412.0" mnemonicParsing="false" onAction="#createReport4" text="Best Clients" />
+            <Button fx:id="r1Btn" layoutX="26.0" layoutY="301.0" mnemonicParsing="false" onAction="#createReport1" text="Products Ordered on Date" />
+            <TextField fx:id="startHour" layoutX="161.0" layoutY="337.0" prefHeight="25.0" prefWidth="32.0" promptText="12" />
+            <TextField fx:id="endHour" layoutX="257.0" layoutY="337.0" prefHeight="25.0" prefWidth="32.0" promptText="18" />
+            <Label layoutX="192.0" layoutY="341.0" text="=start hour" />
+            <Label layoutX="290.0" layoutY="341.0" text="=end hour" />
+            <TextField fx:id="orderCount" layoutX="153.0" layoutY="374.0" prefHeight="25.0" prefWidth="56.0" promptText="3" />
+            <Label layoutX="218.0" layoutY="378.0" text="Times." />
+            <TextField fx:id="dateTextField" layoutX="192.0" layoutY="301.0" promptText="22/07/2022" />
+            <TextField fx:id="clientOrderCount" layoutX="219.0" layoutY="412.0" prefHeight="25.0" prefWidth="46.0" promptText="4" />
+            <Label layoutX="112.0" layoutY="416.0" text="Ordered more than" />
+            <Label layoutX="276.0" layoutY="416.0" text="times and value &gt;" />
+            <TextField fx:id="clientValueCount" layoutX="376.0" layoutY="412.0" prefHeight="25.0" prefWidth="38.0" promptText="200" />
+            <Label layoutX="419.0" layoutY="417.0" text="\$" />
+            <ListView fx:id="reportListView" layoutX="449.0" layoutY="269.0" prefHeight="178.0" prefWidth="445.0" />
+            <Label layoutX="201.0" layoutY="166.0" text="Price" />
+            <TextField fx:id="productPrice" layoutX="236.0" layoutY="162.0" prefHeight="25.0" prefWidth="62.0" />
+            <ListView fx:id="clientIdList" layoutX="898.0" layoutY="301.0" prefHeight="146.0" prefWidth="101.0" />
+            <Label layoutX="898.0" layoutY="277.0" text="ClientIDs:" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
