@@ -2,9 +2,9 @@
 
 # FOOD DELIVERY MANAGEMENT SYSTEM
 
-![Shape1](RackMultipart20230414-1-94ax43_html_c6c36bf69d3fedea.gif)
 
-![](RackMultipart20230414-1-94ax43_html_44187a9899a65972.png)
+
+![Login and logo of the application](images/Picture1.png)
 
 ##
 
