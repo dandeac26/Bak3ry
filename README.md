@@ -14,9 +14,9 @@
 - IDE: Intellij
 - GUI: JavaFX
 
-![Shape2](RackMultipart20230414-1-94ax43_html_42a77781f880c8a4.gif)
 
-![](RackMultipart20230414-1-94ax43_html_3c900a20f90c38ae.png)
+
+![client and employee views](images/Picture2.png)
 
 Here is a short overview of the GUI:
 
@@ -37,21 +37,21 @@ The objective of this assignment is to implement a food delivery management syst
 
 ## Use case diagram:
 
-![](RackMultipart20230414-1-94ax43_html_90e55bdd381d5967.png)
+![](images/Picture3.png)
 
 ## 2.Handling unintended scenarios
 
 The application is not a deployable ready application and has more or less the purpose of the enabling students to practice and learn. Therefore some of the functionalities are not expected to work in the real world. This being said, the application still tries it's best to handle unexpected/ unwanted scenarios. It tries to imitate real life features like a search feature.
 
-![](RackMultipart20230414-1-94ax43_html_4e31002ed0fabb65.png)
+![](images/Picture4.png)
 
 ## 3 Design
 
-Package diagram: ![](RackMultipart20230414-1-94ax43_html_cba343ed3dda856c.png)
+Package diagram: ![](images/Picture4.png)
 
 UML Class diagram:
 
-![](RackMultipart20230414-1-94ax43_html_78754ec6d9ff630b.png)
+![](images/Picture5.png)
 
 1.
 ## Implementation
@@ -219,11 +219,11 @@ This kind of structure was used in several parts in the project and make process
 
 As you can see there are several prompts to provide the user with instant information about what kind of information is expected and how to better format it. It is especially useful in the AdminScene where the user has multiple textboxes.
 
-![](RackMultipart20230414-1-94ax43_html_5af7a617431797f6.png)
+![](images/Picture6.png)
 
 The user is able to go through multiple windows and still keep the information due to the IDeliveryService and DeliveryService classes. This is how the information about orders persists through different stages. This is useful for generating the reports later on. Login information is stores indefinetly, even after restarting the application.
 
-![](RackMultipart20230414-1-94ax43_html_3c900a20f90c38ae.png)
+![](images/Picture7.png)
 
 The UI is easy to use because the user can easily search his desiered items, then just select them from the ListView and click Add. You have a list of your order and the price total. After clicking submit, the information will be available for the employee in his own window. The submit also generates a bill in .txt format for the user, in similar format as the employee's list view.
 
