@@ -47,11 +47,11 @@ The application is not a deployable ready application and has more or less the p
 
 ## 3 Design
 
-Package diagram: ![](images/Picture4.png)
+Package diagram: ![](images/Picture5.png)
 
 UML Class diagram:
 
-![](images/Picture5.png)
+![](images/Picture6.png)
 
 1.
 ## Implementation
@@ -219,11 +219,11 @@ This kind of structure was used in several parts in the project and make process
 
 As you can see there are several prompts to provide the user with instant information about what kind of information is expected and how to better format it. It is especially useful in the AdminScene where the user has multiple textboxes.
 
-![](images/Picture6.png)
+![](images/Picture7.png)
 
 The user is able to go through multiple windows and still keep the information due to the IDeliveryService and DeliveryService classes. This is how the information about orders persists through different stages. This is useful for generating the reports later on. Login information is stores indefinetly, even after restarting the application.
 
-![](images/Picture7.png)
+![](images/Picture8.png)
 
 The UI is easy to use because the user can easily search his desiered items, then just select them from the ListView and click Add. You have a list of your order and the price total. After clicking submit, the information will be available for the employee in his own window. The submit also generates a bill in .txt format for the user, in similar format as the employee's list view.
 
