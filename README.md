@@ -4,7 +4,7 @@
 
 
 
-![Login and logo of the application](images/Picture1.png)
+![Login and logo of the application](https://i.imgur.com/ZCKwmZn.png)
 
 ##
 
@@ -16,7 +16,7 @@
 
 
 
-![client and employee views](images/Picture2.png)
+![client and employee views](https://i.imgur.com/PqkYZSu.png)
 
 Here is a short overview of the GUI:
 
@@ -37,21 +37,21 @@ The objective of this assignment is to implement a food delivery management syst
 
 ## Use case diagram:
 
-![](images/Picture3.png)
+![](https://i.imgur.com/XZ294ur.png)
 
 ## 2.Handling unintended scenarios
 
 The application is not a deployable ready application and has more or less the purpose of the enabling students to practice and learn. Therefore some of the functionalities are not expected to work in the real world. This being said, the application still tries it's best to handle unexpected/ unwanted scenarios. It tries to imitate real life features like a search feature.
 
-![](images/Picture4.png)
+![](https://i.imgur.com/VqubCsO.png)
 
 ## 3 Design
 
-Package diagram: ![](images/Picture5.png)
+Package diagram: ![](https://i.imgur.com/mNKEzrL.png)
 
 UML Class diagram:
 
-![](images/Picture6.png)
+![](https://i.imgur.com/msPAKV5.png)
 
 1.
 ## Implementation
@@ -219,11 +219,11 @@ This kind of structure was used in several parts in the project and make process
 
 As you can see there are several prompts to provide the user with instant information about what kind of information is expected and how to better format it. It is especially useful in the AdminScene where the user has multiple textboxes.
 
-![](images/Picture7.png)
+![](https://i.imgur.com/YIrpGs2.png)
 
 The user is able to go through multiple windows and still keep the information due to the IDeliveryService and DeliveryService classes. This is how the information about orders persists through different stages. This is useful for generating the reports later on. Login information is stores indefinetly, even after restarting the application.
 
-![](images/Picture8.png)
+![](https://i.imgur.com/Mbnx7K3.png)
 
 The UI is easy to use because the user can easily search his desiered items, then just select them from the ListView and click Add. You have a list of your order and the price total. After clicking submit, the information will be available for the employee in his own window. The submit also generates a bill in .txt format for the user, in similar format as the employee's list view.
 
