@@ -62,15 +62,15 @@ These classes are used to hold the required data which will be used in the Deliv
 
 This project also uses the Observer Design Pattern.
 
-`
+```java
 public interface Observer\<T\> {
 void update(PropertyChanged\<T\> args);
 }
-`
+```
 
 There are several objects: Employee, Client, Administrator that make use of the observer to update themselves when important changes happen to the DeliveryService class which is Observable. The Delivery Service class holds the main Arrays used to hold the data and represent it.
 
-`
+```java
 public class Observable\<T\> {
 
 private List\<Observer\<T\>\> observers = new ArrayList\<\>();
@@ -86,13 +86,13 @@ final PropertyChanged\<T\> changedEventArgs = new PropertyChanged\<\>(source, pr
 }
  }
  }
- `
+ ```
 
 The class Login implements Serializable in order to store username/password information in byte format.
 
 It is capable of reading back the data and providing the Controller with the login information.
 
-`
+```java
 public class Login implements java.io.Serializable{
 private String username;
  private String password;
@@ -124,7 +124,7 @@ list = Files._lines_(path)
 }).toList();
  return list;
 }…
-`
+```
 
 The Order class stores the orderID and the ClientId along with the Data. IT is used as the Key in the map where the main data is stored about the MenuItems and Orders currently present in the application.
 
@@ -132,7 +132,7 @@ It is used by several Classes to go through HashMaps that hold important data, l
 
 The IDeliveryService Interface holds all the main operations and most important. It helps with populating the Map with the Orders and the List with the available menu items. Whenever such a method is called, we also notify all the observers in the DeliveryService to make sure everything works as expected.
 
-`
+```java
 public interface IDeliveryService {
  List\<BaseProduct\> getMenuItems();
 
@@ -158,13 +158,13 @@ Integer getOrderTotal(Order order);
 
 Integer getClientID();
 }
-`
+```
 
 The DeliveryService is built upon the singleton pattern. The class extends the Observable class and implements the IDeliveryService. It is called once using the getInstance Method.
 
 This class also populates the MenuItem lists with the products.csv file by calling a static method .getData from the ReadCSVFile class. This by default reads the products.csv sent to us by the lab teacher, but it also can work with data if imported through the admin interface. There is products2.csv of smaller size meant for a better visualization of the updates present in the admin interface upon the menu items.
 
-`
+```java
 public class ReadCSVFile {
 public static List\<BaseProduct\> getData(Path path) {
  List\<BaseProduct\> products;
@@ -187,11 +187,11 @@ Integer._parseInt_(fields[3]), Integer._parseInt_(fields[4]), Integer._parseInt_
 }
 return new ArrayList\<\>(products);
 }
-`
+```
 
 There has been a lot of use of Lambda expressions in this project, here is an example where I used it to generate the orders in the Employees:
 
-`
+```java
 @Override
 public void update(PropertyChanged\<IDeliveryService\> args) {
 //System.out.println(args.toString());
@@ -213,7 +213,7 @@ deleter.put(result, order.getKey());
  );
 
 }
-`
+```
 
 This kind of structure was used in several parts in the project and make processing data a bit easier. To be noted is the fact that some ListViews(used for presenting data to the user in the GUI) are declared to contain String objects instead of BaseProducts. It made life a bit more complicated so I needed those expressions in order to work with data. It was a bit confusing at the beginning but then it came more and more natural. It was a steep learning curve.
 
