@@ -245,3 +245,5 @@ Date: 23/07/2022 20:49:13
 ## Conclusions
 
 In conclusion, I was expecting this project to be easy compared to others, but it turned out to be the hardest one yet. It required to implement several design patterns and workflows like lambda expressions, and it demanded a lot of trial and error. Everything seemed so fragile and could break so easily. I also learned some interesting tricks in Intellij IDE which made working a bit easier as I progressed.
+
+This documentation was achieved with the help of ChatGPT for formatting the markdown file and using better wording.
